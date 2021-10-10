@@ -1,0 +1,310 @@
+:root {
+/* color variables */
+--primary-color: #357b70;
+--secondary-color: #481c3c;
+--bg-color: #fff6ce;
+--white: white;
+--black: black;
+--btn-color: #e0b354;
+--color-1: #05676e;
+--color-2: #489c79;
+--color-3: #2b2b2b;
+/* number variables */
+--num-1: 10px;
+--num-2: 700px;
+--num-3: 20px;
+/* font weights */
+--fnt-1: 400;
+--fnt-2: 700;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/*SVG Editing
+	Each Path was given an id, of b1 - b11.
+*/
+#los{
+	max-width:var(--num-2);
+	height:auto;
+  padding: var(--num-3);
+	width:100%;
+}
+#b1{
+	  fill: silver;
+      animation-name: fill;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+}
+#b2{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b3{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b4{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b5{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b6{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b7{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b8{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b9{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b10{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+#b11{
+	filter: invert(48%)sepia(79%)saturate(2476%)hue-rotate(86deg)brightness(118%)contrast(119%);
+}
+  @keyframes fill {
+              0% {
+                  fill: var(--secondary-color);
+              }
+              50% {
+                  fill: var(--white);
+              }
+              100% {
+                  fill: var(--secondary-color);
+              }
+          }
+
+
+body {
+  background-color: var(--bg-color);
+  font-family:'Lato', sans-serif;
+  font-weight: var(--fnt-1);
+  font-size: 16px;
+  /* Sets the fonts size to 16px */
+  line-height: 1/6;
+  /* Sets the line-height to 1.6 */
+  overflow-x: hidden;
+}
+
+
+
+a {
+  color: var(--primary-color);
+}
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:visited {
+  /* visited link */
+  color: var(--color-1);
+}
+a:active {
+  /* selected link */
+  color: var(--color-2);
+}
+
+
+button, .button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underlin, etc) of the button */
+  background-color: var(--secondary-color);
+  color:var(--white);
+  text-decoration: none;
+  /* adds spacing to the button (this will be discussed more in-depth later) */
+  padding: var(--num-1);
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of var(--num-17);, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button {
+  display: inline-block;
+}
+
+.button__secondary {
+  background-color: var(--btn-color);
+  color: var(--color-3);
+}
+.button__third {
+  background-color: var(--secondary-color);
+  color:var(--white);
+  padding: 7px;
+  border-radius: var(--num-3);
+}
+
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+.navigation-list__item {
+  text-decoration: none;
+}
+.navigation-list {
+  list-style-type: none;
+  position: fixed;
+  right: 100px;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+
+.contact-list__item--active {
+  text-decoration: none;
+}
+.contact-list__item {
+  text-decoration: underline;
+}
+.contact-list {
+  list-style-type: none;
+}
+
+.content {
+  display: block;
+  max-width: var(--num-2);
+  margin: auto;
+  text-align: center;
+}
+
+.skills {
+  max-width: var(--num-2);
+  margin: auto;
+  text-align: center;
+  margin-bottom: var(--num-3);
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: 255px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.profile {
+  max-width: var(--num-2);
+  margin: 0 auto;
+}
+
+.row {
+  border-left: 3px solid var(--black);
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: var(--num-3);
+}
+.page-header__item {
+  flex: 0 1 200px;
+  border-radius: 50%;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+  max-width: 300px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--num-3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--num-1);
+}
+.grid__item {
+  background-color: lightgray;
+  border-radius: var(--num-1);
+  padding: var(--num-1);
+}
+.grid__item-1 {
+/*  grid-column: span 2; */
+}
+.grid__item-2 {
+/*  grid-row: span 2; */
+}
+.grid__item-3 {
+grid-row: span 2;
+}
+.grid__item-4 {
+/*  grid-row: span 1; */
+}
+.grid__item-5 {
+/*  grid-row: span 1; */
+}
+.grid__item: last-child {
+/*  grid-column: 3 / 3;
+  grid-row: 1 / 3; */
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--fnt-2);
+  text-decoration: underline;
+}
+
+
+h2 {
+  font-size: 30px;
+  font-weight: var(--fnt-2);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--fnt-2);
+}
+
+
+
+@media all and (max-width: 550px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 550px) and (max-width: 750px){
+ .grid {
+   grid-template-columns: 1fr 1fr;
+ }
+}
+@media all and (max-width: 750px){
+ .grid {
+   grid-gap: var(--num-1);
+ }
+ .grid__item:last-child {
+   grid-column: auto/auto;
+   grid-row: auto/auto;
+ }
+h1 {
+  font-size: 22px;
+  }
+}
