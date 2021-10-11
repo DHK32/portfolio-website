@@ -217,6 +217,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-header__item {
   flex: 0 1 200px;
   border-radius: 50%;
+  width: 190px;
+  height: 190px;
 }
 .page-header__item:last-child {
   flex-grow: 1;
