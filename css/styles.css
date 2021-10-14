@@ -141,8 +141,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .button__secondary {
-  background-color: var(--btn-color);
-  color: var(--color-3);
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 7px;
+  border-radius: 7px;
 }
 .button__third {
   background-color: var(--secondary-color);
@@ -167,6 +169,60 @@ button:hover, button:focus, .button:hover, .button:focus {
   display: inline-block;
   margin-left: 15px;
 }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0,0,0,0.13);
+}
+.label-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+.label-form,
+.msg {
+  width: 48%;
+}
+.label-form .label,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 250px;
+}
+
+@media screen and (max-width: 550px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+}
+
 
 
 .contact-list__item--active {
@@ -196,7 +252,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .profile__portrait {
   float: left;
   width: 250px;
-  height: 280px;
+  height: 320px;
   margin-right: 40px;
   border-radius: 50%;
 }
