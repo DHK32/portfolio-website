@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<header class="page-header">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <img src="img/logo.png" alt="logo" class="page-header__item">
+    <title>Contact Darren Saito</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
 
+<body>
+
+<header class="page-header">
+  <img src="img/logo.png" alt="logo" class="page-header__item">
   <nav>
     <ul role="menubar" class="navigation-list">
       <li role="presentation">
@@ -26,62 +31,43 @@
       </li>
     </ul>
   </nav>
-
-
-
 </header>
 
 
-<body>
+
   <h1>Contact Darren Saito</h1>
-<nav>
-  <ul>
-      Darren Saito<br>
-      Full Stack Developer<br>
-      Los Angeles, CA, USA<br>
-  </ul>
-</nav>
 
 
-<nav>
-  <ul role="menubar" class="contact-list">
-    <li role="presentation">
-      <a href="tel:18182076978" alt="call me at 18182076978" class="contact-list__item contact-list__item--active">Call Me: 1 818 207 6978</a>
-    </li>
-    <li role="presentation">
-      Skype: <a href="skype:darren.saito" class="contact-list__item">darren.saito</a>
-    </li>
-    <li role="presentation">
-      <a href="mailto:ilLR4056@gmail.com" class="contact-list__item">ilLR4056@gmail.com</a>
-    </li>
-  </ul>
-</nav>
 
-<nav>
-  <ul role="menubar" class="contact-list">
-    <li role="presentation">
-      <a href="mailto:ilLR4056@gmail.com" class="contact-list__item">Contact me</a>
-    </li>
-  </ul>
-</nav>
 
-<div>
-  <form action="" method="post" id="contact-form">
+<div class="wrapper">
+  <div class="contact-info">
+    <nav>
+      <ul>
+          <h3>Darren Saito</h3>
+          Full Stack Developer<br>
+          Los Angeles, CA, USA<br>
+      </ul>
+    </nav>
+  </div>
+  <div class="contact-form">
+    <div class="label-form">
 
-    <label class="standard-label" for="contact-email">Email:</label>
-    <input type="email" id="contact-email" required>
+      <input type="text" class="label" placeholder="Name">
 
-    <label class="standard-label" for="contact-telephone">Telephone:</label>
-    <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+      <input type="email" class="label" placeholder="Email*" required>
 
-    <label class="standard-label" for="message" >Message:</label>
-    <textarea maxlength="240" id="message" required></textarea>
+      <input type="tel" class="label" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Phone">
+    </div>
+    <div class="msg">
+      <textarea placeholder="Message*" required></textarea>
+      <button class="button__third">Send</button><br>
+      <span class="note"> * = required field</span>
 
-    <button type="submit" value="Send Message" class="button__third">Send Message</button><br>
-  <script src="js/tota11y.min.js"></script>
+
+    </div>
+  </div>
 </div>
-</body>
-
 
 
 
@@ -99,3 +85,6 @@
     <img src="img/linkedin_icon.svg" alt="LinkedIn">
   </div>
 </footer>
+<script src="js/tota11y.min.js"></script>
+</body>
+</html>
