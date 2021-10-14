@@ -107,7 +107,7 @@ body {
 
 
 a {
-  color: #357b70;
+  color: #481c3c;
 }
 a:hover, a:focus {
   /* No underlining when hovering over a link */
@@ -148,7 +148,7 @@ button {
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underlin, etc) of the button */
   background-color: #481c3c;
-  color:white;
+  color:white !important;
   text-decoration: none;
   /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
@@ -163,29 +163,41 @@ button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
+  background-color: lightgray;
+  color: black !important;
 }
+
 
 .button {
   display: inline-block;
 }
 
 .button__secondary {
-  background-color: #e0b354;
-  color: #2b2b2b;
+  background-color: #481c3c;
+  color: white;
+  padding: 7px;
+  border-radius: 7px;
+  text-decoration: none;
 }
+
 .button__third {
   background-color: #481c3c;
+  text-align: center;
   color:white;
-  padding: 7px;
-  border-radius: 20px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 
 
 .navigation-list__item--active {
   text-decoration: none;
+  color: #481c3c;
 }
 .navigation-list__item {
   text-decoration: none;
+  color: #481c3c;
 }
 .navigation-list {
   list-style-type: none;
@@ -195,6 +207,69 @@ button:hover, button:focus, .button:hover, .button:focus {
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
+}
+
+
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+.contact-info {
+  float: left;
+  display: block;
+  width: 30%;
+  text-align: center;
+}
+.contact-form {
+  float: left;
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0,0,0,0.13);
+}
+.label-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+.label-form,
+.msg {
+  width: 48%;
+}
+.label-form .label,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 250px;
+}
+
+@media screen and (max-width: 550px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
 }
 
 
@@ -225,7 +300,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .profile__portrait {
   float: left;
   width: 250px;
-  height: 255px;
+  height: 290px;
   margin-right: 40px;
   border-radius: 50%;
 }
@@ -259,15 +334,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 .page-footer {
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  position: relative;
+  position: relative !important;
   bottom: 0px;
   max-width: 300px;
   width: 100%;
@@ -314,6 +387,7 @@ h1 {
   font-size: 30px;
   font-weight: 700;
   text-decoration: underline;
+  text-align: center;
 }
 
 
@@ -334,7 +408,34 @@ h3 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+  .contact-info{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .navigation-list--item{
+    display: block;
+    float: right;
+  }
+  .navigation-list{
+    right: 20px;
+  }
+  .navigation-list li{
+    display: block;
+    margin-right: 5px;
+    float: right;
+    text-align: right;
+    width: 100%;
+    padding: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
+.note{
+  font-style: italic;
+  color: #c5ecfd;
+}
+
 @media all and (min-width: 550px) and (max-width: 750px){
  .grid {
    -ms-grid-columns: 1fr 10px 1fr;
